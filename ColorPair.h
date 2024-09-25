@@ -2,7 +2,7 @@
 #define COLORPAIR_H
 
 // Enum for Major Colors
-enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET}; 
 
 // Enum for Minor Colors
 enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};

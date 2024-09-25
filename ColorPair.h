@@ -1,6 +1,6 @@
 #ifndef COLORPAIR_H
 #define COLORPAIR_H
-
+ 
 // Enum for Major Colors
 enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET}; 
 

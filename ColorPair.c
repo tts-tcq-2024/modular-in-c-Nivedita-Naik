@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "ColorPair.h"
+#include "ColorPair.h" 
 
 // Color names corresponding to enums
 const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"}; 

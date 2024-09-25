@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include "ColorPair.h"
-
 // Color names corresponding to enums
 const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"};
 const char* MinorColorNames[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 
 int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
         MajorColorNames[colorPair->majorColor],
-        MinorColorNames[colorPair->minorColor]);
-}
+        MinorColorNames[colorPair->minorColor]);}
 
 ColorPair GetColorFromPairNumber(int pairNumber) {
     ColorPair colorPair;
@@ -21,13 +18,11 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
         (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
     colorPair.minorColor =
         (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-    return colorPair;
-}
+    return colorPair;}
 
 int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
-            colorPair->minorColor + 1;
-}
+            colorPair->minorColor + 1;}
 
 void PrintColorCodeManual(void) {
     printf("Color Code Manual:\n");
@@ -35,6 +30,4 @@ void PrintColorCodeManual(void) {
         ColorPair colorPair = GetColorFromPairNumber(i);
         char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
         ColorPairToString(&colorPair, colorPairNames);
-        printf("%d: %s\n", i, colorPairNames);
-    }
-}
+        printf("%d: %s\n", i, colorPairNames);}}
